@@ -2,8 +2,9 @@ import React from "react";
 import Titles from "./Components/Titles";
 import Form from "./Components/Form";
 import Weather from "./Components/Weather";
+require('dotenv').config()
 
-const API_KEY = "9957d173c21d346fe61cad48f9c1c41c";
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
 class App extends React.Component {
 
@@ -16,7 +17,6 @@ class App extends React.Component {
     console.log(data);
   }
 
-
   render() {
     return(
       <div>
@@ -27,7 +27,5 @@ class App extends React.Component {
     );
   };
 }
-
-
 
 export default App;
